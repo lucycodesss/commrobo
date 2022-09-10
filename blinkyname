@@ -1,0 +1,59 @@
+/* I defined a dot as 1 unit
+   defined dash as 3 units
+
+  defined delay as unit 2
+  
+   Morse code of my name is:
+   
+   P : * _ _ *
+   A : * -
+   Y : _ *_ _
+   A : * -
+   S : * * *
+*/
+int num = 500;  //unit
+int timeb = 500;
+void setup() {
+  // put your setup code here, to run once:
+pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+
+//P
+blinkyON(num*1);
+ 
+blinkyON(num*3);
+blinkyON(num*3);
+blinkyON(num*1);
+
+delay(num*2);  
+// A
+blinkyON(num*1);
+blinkyON(num*3);
+delay(num*2);           
+// Y
+blinkyON(num*3);
+blinkyON(num*1);
+blinkyON(num*3);
+blinkyON(num*3);
+delay(num*2);
+
+
+// A
+blinkyON(num*1);
+blinkyON(num*3);
+delay(num*2);
+
+//S 
+blinkyON(num*1);
+blinkyON(num*1);
+blinkyON(num*1);
+}
+void blinkyON(int time)
+{
+digitalWrite(LED_BUILTIN,HIGH);
+delay(time);
+digitalWrite(LED_BUILTIN,LOW);
+delay(timeb);
+}
